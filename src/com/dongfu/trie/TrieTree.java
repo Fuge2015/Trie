@@ -4,9 +4,12 @@ package com.dongfu.trie;
  * Created by dongfu on 16-12-25.
  */
 public class TrieTree {
-    private int wordCount = 0;
 
     private Node root = new Node(null, '#');
+
+    public int getWordCount() {
+        return root.getWordCount();
+    }
 
     public void add(Word word) {
         Node point = root;
@@ -15,13 +18,16 @@ public class TrieTree {
             Node child = searchLetter(point, letters.charAt(i));
             if (child == null) {
                 point = addLetters(point, letters, i);
-                point.setWord(word);
-                return;
+                break;
             } else {
                 point = child;
             }
         }
         point.setWord(word);
+        while(point != null) {
+            point.setWordCount(point.getWordCount() + 1);
+            point = point.getFather();
+        }
     }
 
     private Node searchLetter(Node node, char letter) {

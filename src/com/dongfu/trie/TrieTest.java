@@ -26,6 +26,7 @@ public class TrieTest {
 
         System.out.println(tt.search("bachelor"));
         System.out.println(tt.search("bachelor").getWord());
+        System.out.println(tt.getWordCount());
         System.out.println(tt.search("bachelor").getWord().getWord());
     }
 }
