@@ -94,6 +94,10 @@ public class TrieTree {
             return false;
         }
         point.setWord(null);
+        while(point != null) {
+            point.setWordCount(point.getWordCount() - 1);
+            point = point.getFather();
+        }
         return true;
     }
 }
