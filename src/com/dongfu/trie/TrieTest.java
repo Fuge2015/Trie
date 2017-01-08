@@ -9,6 +9,7 @@ import java.util.LinkedList;
  */
 public class TrieTest {
     public static void main(String args[]) {
+        // TODO:create the unittest methods.
         TrieTreeWithList tt = new TrieTreeWithList();
 //        TrieTree tt = new TrieTree();
         LinkedList<String> list = new LinkedList<>();
