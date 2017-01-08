@@ -11,7 +11,7 @@ public class TrieTree {
         return root.getWordCount();
     }
 
-    public void add(Word word) {
+    public void insert(Word word) {
         Node point = root;
         String letters = word.getWord();
         for (int i = 0, length = letters.length(); i < length; i++) {
@@ -100,4 +100,5 @@ public class TrieTree {
         }
         return true;
     }
+
 }
